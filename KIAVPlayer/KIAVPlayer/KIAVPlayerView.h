@@ -8,9 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
+#import "KIAVPlayer.h"
 
-@interface KIAVPlayerView : UIView
-
-- (void)setPlayer:(AVPlayer *)player;
+@interface KIAVPlayerView : UIView <KIAVPlayerViewDelegate>
 
 @end

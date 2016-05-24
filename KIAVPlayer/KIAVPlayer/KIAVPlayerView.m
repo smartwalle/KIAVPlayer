@@ -25,4 +25,32 @@
     return (AVPlayerLayer *)self.layer;
 }
 
+- (void)player:(KIAVPlayer *)player readyToPlayItem:(AVPlayerItem *)playerItem {
+    [self setPlayer:player.player];
+}
+
+- (void)playerDidStartPlay:(KIAVPlayer *)player {
+    
+}
+
+- (void)playerDidPause:(KIAVPlayer *)player {
+    
+}
+
+- (void)playerDidStopPlay:(KIAVPlayer *)player {
+    [self setPlayer:nil];
+}
+
+- (void)player:(KIAVPlayer *)player didPlayToEndTime:(BOOL)endTime {
+    [self setPlayer:nil];
+}
+
+- (void)player:(KIAVPlayer *)player didLoadSeconds:(NSTimeInterval)availableSeconds totalSeconds:(NSTimeInterval)totalSeconds {
+    
+}
+
+- (void)player:(KIAVPlayer *)player didUpdatePlayProgress:(NSTimeInterval)currentTime totalSeconds:(NSTimeInterval)totalSeconds {
+    NSLog(@"%f", currentTime/totalSeconds);
+}
+
 @end

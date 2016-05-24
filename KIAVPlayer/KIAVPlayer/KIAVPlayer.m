@@ -7,7 +7,6 @@
 //
 
 #import "KIAVPlayer.h"
-#import "KIAVPlayerView.h"
 
 NSString * const KIPlayerDidStartPlayNotification       = @"KIPlayerDidStartPlayNotification";
 NSString * const KIPlayerDidPlayToEndTimeNotification   = @"KIPlayerDidPlayToEndTimeNotification";
@@ -18,7 +17,6 @@ NSString * const KIPlayerItemPlaybackBufferEmptyNofification    = @"KIPlayerItem
 
 @interface KIAVPlayer ()
 @property (nonatomic, strong) AVPlayer       *player;
-@property (nonatomic, strong) KIAVPlayerView *playerView;
 @property (nonatomic, assign) BOOL           pauseWithUser;
 @property (nonatomic, assign) BOOL           playImmediately;
 
@@ -72,7 +70,9 @@ static KIAVPlayer *KI_AV_PLAYER;
             if (self.playerReadyToPlay != nil) {
                 self.playerReadyToPlay(playerItem, playerItem.totalSeconds);
             }
-            
+            if (self.playerViewDelegate != nil) {
+                [self.playerViewDelegate player:self readyToPlayItem:playerItem];
+            }
             if (self.playImmediately) {
                 [self play];
             }
@@ -85,6 +85,9 @@ static KIAVPlayer *KI_AV_PLAYER;
         NSTimeInterval availableSeconds = [playerItem availableSeconds];// 计算缓冲进度
         if (self.playerLoadDataProgress != nil) {
             self.playerLoadDataProgress(playerItem, playerItem.totalSeconds, availableSeconds);
+        }
+        if (self.playerViewDelegate != nil) {
+            [self.playerViewDelegate player:self didLoadSeconds:availableSeconds totalSeconds:playerItem.totalSeconds];
         }
     } else if ([keyPath isEqualToString:@"playbackBufferEmpty"]) {
 #ifdef DEBUG
@@ -126,6 +129,9 @@ static KIAVPlayer *KI_AV_PLAYER;
                                              if (weakSelf.playerDidUpdatePlayProgress) {
                                                  weakSelf.playerDidUpdatePlayProgress(weakSelf.player.currentItem, weakSelf.player.currentItem.totalSeconds, currentTime);
                                              }
+                                             if (weakSelf.playerViewDelegate != nil) {
+                                                 [weakSelf.playerViewDelegate player:weakSelf didUpdatePlayProgress:currentTime totalSeconds:weakSelf.player.currentItem.totalSeconds];
+                                             }
                                          }];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -141,10 +147,6 @@ static KIAVPlayer *KI_AV_PLAYER;
                                              selector:@selector(playerItemPlaybackStalledNotification:)
                                                  name:AVPlayerItemPlaybackStalledNotification
                                                object:self.player.currentItem];
-    
-    if (self.player != nil) {
-        [self.playerView setPlayer:self.player];
-    }
 }
 
 - (void)playWithAsset:(AVURLAsset *)asset {
@@ -176,6 +178,9 @@ static KIAVPlayer *KI_AV_PLAYER;
         if (self.playerDidStartPlayItem != nil) {
             self.playerDidStartPlayItem(self.player.currentItem);
         }
+        if (self.playerViewDelegate != nil) {
+            [self.playerViewDelegate playerDidStartPlay:self];
+        }
     }
 }
 
@@ -185,6 +190,9 @@ static KIAVPlayer *KI_AV_PLAYER;
         [self.player pause];
         if (self.playerDidPauseItem) {
             self.playerDidPauseItem(self.player.currentItem);
+        }
+        if (self.playerViewDelegate != nil) {
+            [self.playerViewDelegate playerDidPause:self];
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:KIPlayerDidPauseItemNotification
                                                             object:self.player.currentItem];
@@ -197,6 +205,9 @@ static KIAVPlayer *KI_AV_PLAYER;
         [self.player pause];
         if (self.playerDidStopPlayItem) {
             self.playerDidStopPlayItem(self.player.currentItem);
+        }
+        if (self.playerViewDelegate != nil) {
+            [self.playerViewDelegate playerDidStopPlay:self];
         }
         [[NSNotificationCenter defaultCenter] postNotificationName:KIPlayerDidStopPlayNotification
                                                             object:self.player.currentItem];
@@ -223,7 +234,7 @@ static KIAVPlayer *KI_AV_PLAYER;
     _player = nil;
 }
 
-#pragma mark - NSNotification Handler
+#pragma mark - Notification Handler
 - (void)playerItemDidPlayToEndTime:(NSNotification *)noti {
     if (self.player) {
         [[NSNotificationCenter defaultCenter] postNotificationName:KIPlayerDidPlayToEndTimeNotification
@@ -231,6 +242,9 @@ static KIAVPlayer *KI_AV_PLAYER;
     }
     if (self.playerItemDidPlayToEndTime != nil) {
         self.playerItemDidPlayToEndTime(noti.object, self.player.currentTime==self.player.currentItem.totalSeconds);
+    }
+    if (self.playerViewDelegate != nil) {
+        [self.playerViewDelegate player:self didPlayToEndTime:self.player.currentTime==self.player.currentItem.totalSeconds];
     }
     [self clean];
 }
@@ -250,7 +264,7 @@ static KIAVPlayer *KI_AV_PLAYER;
 }
 
 #pragma mark - Getters & Setters
-- (AVPlayerItem *)currentPlayerItem {
+- (AVPlayerItem *)currentItem {
     return self.player.currentItem;
 }
 
@@ -265,17 +279,6 @@ static KIAVPlayer *KI_AV_PLAYER;
         return 0;
     }
     return self.player.currentTime;
-}
-
-- (KIAVPlayerView *)playerView {
-    if (_playerView == nil) {
-        _playerView = [[KIAVPlayerView alloc] init];
-    }
-    return _playerView;
-}
-
-- (UIView *)view {
-    return self.playerView;
 }
 
 - (void)setPlayerDidUpdateStatusBlock:(KIPlayerDidUpdateStatusBlock)block {
