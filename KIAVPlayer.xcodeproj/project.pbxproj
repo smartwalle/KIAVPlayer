@@ -1,0 +1,349 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D58867981CF4680500879462 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D58867971CF4680500879462 /* main.m */; };
+		D588679B1CF4680500879462 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D588679A1CF4680500879462 /* AppDelegate.m */; };
+		D588679E1CF4680500879462 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D588679D1CF4680500879462 /* ViewController.m */; };
+		D58867A11CF4680500879462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D588679F1CF4680500879462 /* Main.storyboard */; };
+		D58867A31CF4680500879462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58867A21CF4680500879462 /* Assets.xcassets */; };
+		D58867A61CF4680500879462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58867A41CF4680500879462 /* LaunchScreen.storyboard */; };
+		D58867B61CF4681A00879462 /* AVAsset+KIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D58867AF1CF4681A00879462 /* AVAsset+KIAdditions.m */; };
+		D58867B71CF4681A00879462 /* AVPlayer+KIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D58867B11CF4681A00879462 /* AVPlayer+KIAdditions.m */; };
+		D58867B81CF4681A00879462 /* AVPlayerItem+KIAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = D58867B31CF4681A00879462 /* AVPlayerItem+KIAdditions.m */; };
+		D58867B91CF4681A00879462 /* KIAVPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D58867B51CF4681A00879462 /* KIAVPlayer.m */; };
+		D58867BD1CF472D500879462 /* a.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = D58867BC1CF472CF00879462 /* a.mp4 */; };
+		D58867C01CF4741500879462 /* KIAVPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = D58867BF1CF4741500879462 /* KIAVPlayerView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D58867931CF4680500879462 /* KIAVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KIAVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58867971CF4680500879462 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D58867991CF4680500879462 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D588679A1CF4680500879462 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D588679C1CF4680500879462 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D588679D1CF4680500879462 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D58867A01CF4680500879462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D58867A21CF4680500879462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D58867A51CF4680500879462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D58867A71CF4680500879462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D58867AE1CF4681A00879462 /* AVAsset+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVAsset+KIAdditions.h"; sourceTree = "<group>"; };
+		D58867AF1CF4681A00879462 /* AVAsset+KIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVAsset+KIAdditions.m"; sourceTree = "<group>"; };
+		D58867B01CF4681A00879462 /* AVPlayer+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayer+KIAdditions.h"; sourceTree = "<group>"; };
+		D58867B11CF4681A00879462 /* AVPlayer+KIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayer+KIAdditions.m"; sourceTree = "<group>"; };
+		D58867B21CF4681A00879462 /* AVPlayerItem+KIAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AVPlayerItem+KIAdditions.h"; sourceTree = "<group>"; };
+		D58867B31CF4681A00879462 /* AVPlayerItem+KIAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AVPlayerItem+KIAdditions.m"; sourceTree = "<group>"; };
+		D58867B41CF4681A00879462 /* KIAVPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIAVPlayer.h; sourceTree = "<group>"; };
+		D58867B51CF4681A00879462 /* KIAVPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIAVPlayer.m; sourceTree = "<group>"; };
+		D58867BC1CF472CF00879462 /* a.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = a.mp4; sourceTree = "<group>"; };
+		D58867BE1CF4741500879462 /* KIAVPlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KIAVPlayerView.h; sourceTree = "<group>"; };
+		D58867BF1CF4741500879462 /* KIAVPlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KIAVPlayerView.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D58867901CF4680500879462 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D588678A1CF4680500879462 = {
+			isa = PBXGroup;
+			children = (
+				D58867951CF4680500879462 /* KIAVPlayer */,
+				D58867941CF4680500879462 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D58867941CF4680500879462 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D58867931CF4680500879462 /* KIAVPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D58867951CF4680500879462 /* KIAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D58867AD1CF4681A00879462 /* KIAVPlayer */,
+				D58867991CF4680500879462 /* AppDelegate.h */,
+				D588679A1CF4680500879462 /* AppDelegate.m */,
+				D58867BC1CF472CF00879462 /* a.mp4 */,
+				D588679C1CF4680500879462 /* ViewController.h */,
+				D588679D1CF4680500879462 /* ViewController.m */,
+				D588679F1CF4680500879462 /* Main.storyboard */,
+				D58867A21CF4680500879462 /* Assets.xcassets */,
+				D58867A41CF4680500879462 /* LaunchScreen.storyboard */,
+				D58867A71CF4680500879462 /* Info.plist */,
+				D58867961CF4680500879462 /* Supporting Files */,
+			);
+			path = KIAVPlayer;
+			sourceTree = "<group>";
+		};
+		D58867961CF4680500879462 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D58867971CF4680500879462 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D58867AD1CF4681A00879462 /* KIAVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				D58867AE1CF4681A00879462 /* AVAsset+KIAdditions.h */,
+				D58867AF1CF4681A00879462 /* AVAsset+KIAdditions.m */,
+				D58867B01CF4681A00879462 /* AVPlayer+KIAdditions.h */,
+				D58867B11CF4681A00879462 /* AVPlayer+KIAdditions.m */,
+				D58867B21CF4681A00879462 /* AVPlayerItem+KIAdditions.h */,
+				D58867B31CF4681A00879462 /* AVPlayerItem+KIAdditions.m */,
+				D58867BE1CF4741500879462 /* KIAVPlayerView.h */,
+				D58867BF1CF4741500879462 /* KIAVPlayerView.m */,
+				D58867B41CF4681A00879462 /* KIAVPlayer.h */,
+				D58867B51CF4681A00879462 /* KIAVPlayer.m */,
+			);
+			path = KIAVPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D58867921CF4680500879462 /* KIAVPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D58867AA1CF4680500879462 /* Build configuration list for PBXNativeTarget "KIAVPlayer" */;
+			buildPhases = (
+				D588678F1CF4680500879462 /* Sources */,
+				D58867901CF4680500879462 /* Frameworks */,
+				D58867911CF4680500879462 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KIAVPlayer;
+			productName = KIAVPlayer;
+			productReference = D58867931CF4680500879462 /* KIAVPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D588678B1CF4680500879462 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = SmartWalle;
+				TargetAttributes = {
+					D58867921CF4680500879462 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = D588678E1CF4680500879462 /* Build configuration list for PBXProject "KIAVPlayer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D588678A1CF4680500879462;
+			productRefGroup = D58867941CF4680500879462 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D58867921CF4680500879462 /* KIAVPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D58867911CF4680500879462 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58867A61CF4680500879462 /* LaunchScreen.storyboard in Resources */,
+				D58867BD1CF472D500879462 /* a.mp4 in Resources */,
+				D58867A31CF4680500879462 /* Assets.xcassets in Resources */,
+				D58867A11CF4680500879462 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D588678F1CF4680500879462 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D588679E1CF4680500879462 /* ViewController.m in Sources */,
+				D58867B61CF4681A00879462 /* AVAsset+KIAdditions.m in Sources */,
+				D58867B91CF4681A00879462 /* KIAVPlayer.m in Sources */,
+				D58867B71CF4681A00879462 /* AVPlayer+KIAdditions.m in Sources */,
+				D588679B1CF4680500879462 /* AppDelegate.m in Sources */,
+				D58867B81CF4681A00879462 /* AVPlayerItem+KIAdditions.m in Sources */,
+				D58867C01CF4741500879462 /* KIAVPlayerView.m in Sources */,
+				D58867981CF4680500879462 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D588679F1CF4680500879462 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D58867A01CF4680500879462 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D58867A41CF4680500879462 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D58867A51CF4680500879462 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D58867A81CF4680500879462 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D58867A91CF4680500879462 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D58867AB1CF4680500879462 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KIAVPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartwalle.KIAVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D58867AC1CF4680500879462 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KIAVPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.smartwalle.KIAVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D588678E1CF4680500879462 /* Build configuration list for PBXProject "KIAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58867A81CF4680500879462 /* Debug */,
+				D58867A91CF4680500879462 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D58867AA1CF4680500879462 /* Build configuration list for PBXNativeTarget "KIAVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58867AB1CF4680500879462 /* Debug */,
+				D58867AC1CF4680500879462 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D588678B1CF4680500879462 /* Project object */;
+}
