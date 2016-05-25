@@ -50,6 +50,8 @@ typedef void(^KIPlayerLoadDataProgressBlock)        (AVPlayerItem *playerItem, N
 @property (nonatomic, assign)   NSTimeInterval             currentTime;
 @property (nonatomic, weak)     id<KIAVPlayerViewDelegate> playerViewDelegate;
 
++ (KIAVPlayer *)sharedInstance;
+
 - (AVPlayer *)player;
 
 - (void)setPlayerDidUpdateStatusBlock:(KIPlayerDidUpdateStatusBlock)block;

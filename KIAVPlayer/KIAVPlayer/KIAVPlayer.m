@@ -40,22 +40,17 @@ static KIAVPlayer *KI_AV_PLAYER;
 + (KIAVPlayer *)sharedInstance {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        KI_AV_PLAYER = [[KIAVPlayer alloc] init];
+        KI_AV_PLAYER = [[super allocWithZone:nil] init];
     });
     return KI_AV_PLAYER;
 }
 
+//+ (id)allocWithZone:(struct _NSZone *)zone {
+//    return [self sharedInstance];
+//}
+
 - (void)dealloc {
     [self clean];
-}
-
-- (id)init {
-    if (KI_AV_PLAYER == nil) {
-        if (self = [super init]) {
-            KI_AV_PLAYER = self;
-        }
-    }
-    return KI_AV_PLAYER;
 }
 
 #pragma mark - NSKeyValueObserving
