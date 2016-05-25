@@ -342,6 +342,7 @@
 				D58867AC1CF4680500879462 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

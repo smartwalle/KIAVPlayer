@@ -37,6 +37,9 @@
     
 }
 
+- (void)playerDidPlaybackBufferEmpty:(KIAVPlayer *)player {
+}
+
 - (void)playerDidStopPlay:(KIAVPlayer *)player {
     [self setPlayer:nil];
 }
@@ -50,7 +53,7 @@
 }
 
 - (void)player:(KIAVPlayer *)player didUpdatePlayProgress:(NSTimeInterval)currentTime totalSeconds:(NSTimeInterval)totalSeconds {
-    NSLog(@"%f", currentTime/totalSeconds);
+    NSLog(@"%f  %f", currentTime, totalSeconds);
 }
 
 @end

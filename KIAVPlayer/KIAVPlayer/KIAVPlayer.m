@@ -93,6 +93,11 @@ static KIAVPlayer *KI_AV_PLAYER;
         if (self.playerItemPlaybackBufferEmpty != nil) {
             self.playerItemPlaybackBufferEmpty(self.player.currentItem);
         }
+        
+        if (self.playerViewDelegate != nil) {
+            [self.playerViewDelegate playerDidPlaybackBufferEmpty:self];
+        }
+         
     } else if ([keyPath isEqualToString:@"playbackBufferFull"]) {
 #ifdef DEBUG
         NSLog(@"playbackBufferFull");

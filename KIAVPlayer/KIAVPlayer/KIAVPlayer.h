@@ -40,6 +40,8 @@ typedef void(^KIPlayerLoadDataProgressBlock)        (AVPlayerItem *playerItem, N
 - (void)playerDidPause:(KIAVPlayer *)player;
 - (void)playerDidStopPlay:(KIAVPlayer *)player;
 
+- (void)playerDidPlaybackBufferEmpty:(KIAVPlayer *)player;
+
 - (void)player:(KIAVPlayer *)player didPlayToEndTime:(BOOL)endTime;
 - (void)player:(KIAVPlayer *)player didLoadSeconds:(NSTimeInterval)availableSeconds totalSeconds:(NSTimeInterval)totalSeconds;
 - (void)player:(KIAVPlayer *)player didUpdatePlayProgress:(NSTimeInterval)currentTime totalSeconds:(NSTimeInterval)totalSeconds;
